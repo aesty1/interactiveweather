@@ -1,0 +1,17 @@
+.blocks_wrapper {
+    display: flex;
+    margin: 25px auto 0;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #EAECEF;
+    border-radius: 20px;
+    width: 60%;
+}
+.weather_discription {
+    font-weight: 400;
+    color:rgba(135, 137, 140, 0.77)
+}
+
+.weather_block {
+    text-align: left;
+}

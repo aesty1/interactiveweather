@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@font-face {
+    font-family: 'SKCuriosity-Medium';
+    src: url('../../fonts/TTF/SKCuriosity-Medium.ttf') format('truetype');
+    font-family: 'SKCuriosity-Bold';
+    src: url('../../fonts/TTF/SKCuriosity-Bold.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=PT+Sans:wght@400;700&display=swap');
+@import url('//db.onlinewebfonts.com/c/222f4351482d00e35007cfe46e33ebb9?family=Praxis-SemiBold');
+* {
+  font-family: 'SKCuriosity-Bold', sans-serif;
+}
+body {
+  min-height: 1px;
+  background-image: -webkit-linear-gradient(45deg, rgb(0, 65, 139), rgb(109, 170, 251));
+  background-image: -moz-linear-gradient(45deg, rgb(0, 65, 139), rgb(109, 170, 251)); 
+  background-image: linear-gradient(45deg, rgb(0, 65, 139), rgb(109, 170, 251));  
+  background-image: -o-linear-gradient(45deg, rgb(0, 65, 139), rgb(109, 170, 251)); 
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 80%;
+  max-height: 85vh;
+  overflow: auto;
+  border-radius: 25px;
+}
+.container {
+  padding: 40px;
+}
+.field__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 15px;
+}
+#blue {
+  background-color: #6A5ACD;
+}
+#red {
+  background-color: white;
+}
+#green {
+  background-color: #91cd8c;
+}
