@@ -10,7 +10,8 @@ class Weather_block extends Component {
             city: 'Ufa',
             firstDayWeather: {},
             secondDayWeather: {},
-            thirdDayWeather: {}
+            thirdDayWeather: {},
+            chanceOfRain: 0
         }
 
     }
@@ -18,19 +19,16 @@ class Weather_block extends Component {
         this.createWeatherData();
     }
     
-    createWeatherData = () => {
-        
-        this.Api.get_weather(this.state.city)
-            
+    createWeatherData = () => {   
+        this.Api.get_weather(this.state.city)    
             .then((result) => {
-                
                 if(result.firstDayWeather.current && result.secondDayWeather.current && result.thirdDayWeather.current !== undefined) {
                     this.setState({ firstDayWeather: result.firstDayWeather.current,
                                     secondDayWeather: result.secondDayWeather.current,
                                     thirdDayWeather: result.thirdDayWeather.current}); 
                 }
-                
-            
+                this.setState({chanceOfRain: result.forecast.chanceOfRain.forecastday[0].hour[0].chance_of_rain});
+
           })
     };
     checkCondition = () => {
@@ -64,7 +62,12 @@ class Weather_block extends Component {
         }
         return (
             <div className='blocks_wrapper'>
-                <div className='firstDayWeather__container'>
+                <div className='weather_block_info__container'>
+                    <h1>{this.state.city}</h1>
+                    <p>Chance of rain: {this.state.chanceOfRain}%</p>
+                </div>
+                <div className='weather_block_icon__container'></div>
+                {/* <div className='firstDayWeather__container'>
                     <div className='weather_block' onClick={() => this.props.updateColor("blue")}>
                         <h1>{this.state.firstDayWeather.temp_c}</h1>
                         <img alt="weather_image" src={this.firstConditionIcon}/>
@@ -85,7 +88,7 @@ class Weather_block extends Component {
                         <img alt="weather_image" src={this.thirdConditionIcon}/>
                         <p>{this.thirdConditionText}</p>   
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         )

@@ -1,6 +1,6 @@
-import './Field.css';
+import './Search.css';
 import { Component } from 'react';
-class Field extends Component {
+class Search extends Component {
     state = {
         data: []
     }
@@ -28,4 +28,4 @@ class Field extends Component {
     }
 }
 
-export default Field;
+export default Search;

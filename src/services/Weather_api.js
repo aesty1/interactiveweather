@@ -1,8 +1,5 @@
 class Weather_api {
     _key = "key=4d31e6331eba4a4ea32190422231401";
-    _city_name = "Ufa"
-    _state_code = "Bashkortostan"
-    _country_code = "RU"
     _limit = "1"
     _base_url = "http://api.weatherapi.com/v1/";
     // city_name_to_coordinates = (city_name)  => {
@@ -17,10 +14,14 @@ class Weather_api {
                 .then(response => response.json());
         const thirdDayWeather = await fetch(`${this._base_url}current.json?${this._key}&q=${city_name}&days=${3}`)
                 .then(response => response.json());
+        const chanceOfRain = await fetch(`${this._base_url}forecast.json?${this._key}&q=${city_name}&days=1&hourly=24`)
+                .then(response => response.json());
+
         const allWeather = {
             firstDayWeather,
             secondDayWeather,
-            thirdDayWeather
+            thirdDayWeather,
+            chanceOfRain
         }
         
         return allWeather

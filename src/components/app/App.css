@@ -18,6 +18,7 @@ body {
   background-image: -o-linear-gradient(45deg, rgb(0, 65, 139), rgb(109, 170, 251)); 
 }
 .wrapper {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,14 +30,27 @@ body {
   border-radius: 25px;
 }
 .container {
-  padding: 40px;
-}
-.field__container {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  gap: 15px;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+  width: 100%;
 }
+.first_container, .second_container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+  gap: 20px;
+}
+
+.first_container > div, .second_container > div {
+    width: 100%;
+}
+.second_container {
+  width: 30%;
+}
+
 #blue {
   background-color: #6A5ACD;
 }
