@@ -1,8 +1,6 @@
 import './App.css';
-import Header from '../header/Header';
 import Search from '../search/Search';
 import Weather_block from '../weather_block/Weather_block';
-import Choose_day from '../choose_day/Choose_day';
 import Week_weather from '../week_weather/Week_weather';
 import Today_forecast from '../today_forecast/Today_forecast';
 import Air_conditions from '../air_conditions/Air_conditions';
@@ -25,9 +23,12 @@ class App extends Component {
         <div className='container'>
           <div className='first_container'>
             <Search updateData={this.updateData} />
-            <Weather_block data={this.state.data} updateColor={this.updateColor} />
-            <Today_forecast />
-            <Air_conditions />
+            <div className='big_blocks__container'>
+              <Weather_block data={this.state.data} updateColor={this.updateColor} />
+              <Today_forecast data={this.state.data}/>
+              <Air_conditions />
+            </div>
+            
           </div>
           <div className='second_container'>
             <Week_weather />

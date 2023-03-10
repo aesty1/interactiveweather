@@ -1,5 +1,5 @@
-import './Weather_block.css';
 import { Component } from 'react';
+import './Weather_block.css';
 import Weather_api from '../../services/Weather_api';
 class Weather_block extends Component {
     Api = new Weather_api();
@@ -27,7 +27,7 @@ class Weather_block extends Component {
                                     secondDayWeather: result.secondDayWeather.current,
                                     thirdDayWeather: result.thirdDayWeather.current}); 
                 }
-                this.setState({chanceOfRain: result.forecast.chanceOfRain.forecastday[0].hour[0].chance_of_rain});
+                this.setState({chanceOfRain: result.chanceOfRain.forecast.forecastday[0].hour[0].chance_of_rain});
 
           })
     };
@@ -61,16 +61,22 @@ class Weather_block extends Component {
             
         }
         return (
-            <div className='blocks_wrapper'>
+            <div className='weather_block'>
                 <div className='weather_block_info__container'>
-                    <h1>{this.state.city}</h1>
-                    <p>Chance of rain: {this.state.chanceOfRain}%</p>
+                    <div className='weather_block_info_wrapper'>
+                        <p className='big_text weather_block_name'>{this.state.city}</p>
+                        <p className='small_grey_text weather_block_subtitle'>Chance of rain: {this.state.chanceOfRain}%</p>
+                    </div>
+                    
+                    <p className='weather_block_temp'>{this.state.firstDayWeather.temp_c}°</p>
                 </div>
-                <div className='weather_block_icon__container'></div>
+                <div className='weather_block_icon__container'>
+                    <img className='weather_block_icon' alt="weather_image" src={this.firstConditionIcon}/>
+                </div>
                 {/* <div className='firstDayWeather__container'>
                     <div className='weather_block' onClick={() => this.props.updateColor("blue")}>
-                        <h1>{this.state.firstDayWeather.temp_c}</h1>
-                        <img alt="weather_image" src={this.firstConditionIcon}/>
+                        <h1></h1>
+                        
                         <p className='weather_discription'>{this.firstConditionText}</p>
                         
                     </div>

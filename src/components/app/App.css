@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @font-face {
-    font-family: 'SKCuriosity-Medium';
-    src: url('../../fonts/TTF/SKCuriosity-Medium.ttf') format('truetype');
-    font-family: 'SKCuriosity-Bold';
-    src: url('../../fonts/TTF/SKCuriosity-Bold.ttf') format('truetype');
+    font-family: 'SKCuriosity-SemiBold';
+    src: url('../../fonts/TTF/SKCuriosity-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SKCuriosity-Regular';
+  src: url('../../fonts/TTF/SKCuriosity-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SKCuriosity-Bold';
+  src: url('../../fonts/TTF/SKCuriosity-ExtraBold.ttf') format('truetype'); 
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=PT+Sans:wght@400;700&display=swap');
 @import url('//db.onlinewebfonts.com/c/222f4351482d00e35007cfe46e33ebb9?family=Praxis-SemiBold');
 * {
   font-family: 'SKCuriosity-Bold', sans-serif;
+  color: #202B3B;
 }
 body {
   min-height: 1px;
@@ -27,12 +34,13 @@ body {
   width: 80%;
   max-height: 85vh;
   overflow: auto;
+  background-color: #F5F5F5;
   border-radius: 25px;
 }
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   gap: 20px;
   width: 100%;
 }
@@ -43,20 +51,31 @@ body {
   text-align: center;
   gap: 20px;
 }
-
 .first_container > div, .second_container > div {
     width: 100%;
 }
 .second_container {
   width: 30%;
 }
-
-#blue {
-  background-color: #6A5ACD;
+.big_text {
+  font-size: 2.3em;
 }
-#red {
-  background-color: white;
+.small_grey_text {
+  color: #b4b4b4;
+  font-size: 0.91rem;
+  font-family: 'SKCuriosity-SemiBold', sans-serif;
 }
-#green {
-  background-color: #91cd8c;
+.small_black_text {
+  font-size: 1.20rem;
+  font-family: 'SKCuriosity-Bold', sans-serif;
+}
+.big_blocks__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  height: 100%;
+}
+.big_blocks__container > div:not(:first-child)  {
+  min-height: 30%;
 }
