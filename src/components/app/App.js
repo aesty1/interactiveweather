@@ -26,12 +26,12 @@ class App extends Component {
             <div className='big_blocks__container'>
               <Weather_block data={this.state.data} updateColor={this.updateColor} />
               <Today_forecast data={this.state.data}/>
-              <Air_conditions />
+              <Air_conditions data={this.state.data}/>
             </div>
             
           </div>
           <div className='second_container'>
-            <Week_weather />
+            <Week_weather/>
           </div>
         </div>  
       </div>     
