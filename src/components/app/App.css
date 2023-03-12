@@ -47,8 +47,8 @@ body {
 }
 .blocks_wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+
   background-color: #EAECEF;
   border-radius: 20px;
   padding: 20px;
@@ -67,11 +67,18 @@ body {
   width: 30%;
   display: flex;
 }
-.big_text {
-  font-size: 2.3em;
+.very_big_black_text {
+  font-size: 2.2em;
 }
-.small_grey_text {
+.big_black_text {
+  font-size: 1.5em;
+}
+.very_small_grey_text {
   color: #b4b4b4;
+  font-size: 0.91rem;
+  font-family: 'SKCuriosity-SemiBold', sans-serif;
+}
+.very_small_black_text {
   font-size: 0.91rem;
   font-family: 'SKCuriosity-SemiBold', sans-serif;
 }

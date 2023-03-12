@@ -28,7 +28,6 @@ class Weather_block extends Component {
                                     thirdDayWeather: result.thirdDayWeather.current}); 
                 }
                 this.setState({chanceOfRain: result.chanceOfRain.forecast.forecastday[0].hour[0].chance_of_rain});
-
           })
     };
     checkCondition = () => {
@@ -64,8 +63,8 @@ class Weather_block extends Component {
             <div className='weather_block'>
                 <div className='weather_block_info__container'>
                     <div className='weather_block_info_wrapper'>
-                        <p className='big_text weather_block_name'>{this.state.city}</p>
-                        <p className='small_grey_text weather_block_subtitle'>Chance of rain: {this.state.chanceOfRain}%</p>
+                        <p className='very_big_black_text weather_block_name'>{this.state.city}</p>
+                        <p className='very_small_grey_text weather_block_subtitle'>Chance of rain: {this.state.chanceOfRain}%</p>
                     </div>
                     
                     <p className='weather_block_temp'>{this.state.firstDayWeather.temp_c}°</p>

@@ -1,4 +1,14 @@
 .week_weather_wrapper {
     height: 100%;
     box-sizing: border-box;
+    
+}
+.week_weather_items__container {
+    display: flex;
+    flex-direction: row;
+}
+.week_weather_item_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

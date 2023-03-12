@@ -18,7 +18,7 @@ class Search extends Component {
                 <input onKeyDown={this.handleKeyDown}
                 onChange={this.onLabelChange}
                 type="text"
-                className="small_grey_text field"
+                className="very_small_grey_text field"
                 placeholder="Name the city.."></input>
                 {/* <button onClick={() => this.props.updateData(this.state.data)}
                  className="submit_button"

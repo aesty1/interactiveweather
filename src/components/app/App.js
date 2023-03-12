@@ -25,13 +25,14 @@ class App extends Component {
             <Search updateData={this.updateData} />
             <div className='big_blocks__container'>
               <Weather_block data={this.state.data} updateColor={this.updateColor} />
-              <Today_forecast data={this.state.data}/>
+              <Week_weather/>
+              
               <Air_conditions data={this.state.data}/>
             </div>
             
           </div>
           <div className='second_container'>
-            <Week_weather/>
+            <Today_forecast data={this.state.data}/>
           </div>
         </div>  
       </div>     

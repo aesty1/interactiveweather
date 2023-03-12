@@ -1,3 +1,31 @@
 .air_conditions_wrapper {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.air_conditions__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.air_conditions_item__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.air_conditions_item__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.air_conditions_item__img {
+    width: 30px;
+    height: 30px;
+    margin: auto 0
+}
+.wind_img {
+    margin-right: 5px;
+}
+.air_conditions__text {
+    margin: 0 auto;
 }
