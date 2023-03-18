@@ -14,7 +14,7 @@ class Weather_api {
                 .then(response => response.json());
         const thirdDayWeather = await fetch(`${this._base_url}current.json?${this._key}&q=${city_name}&days=${3}`)
                 .then(response => response.json());
-        const chanceOfRain = await fetch(`${this._base_url}forecast.json?${this._key}&q=${city_name}&days=7&hourly=24`)
+        const chanceOfRain = await fetch(`${this._base_url}forecast.json?${this._key}&q=${city_name}&days=3&hourly=24`)
                 .then(response => response.json());
 
         const allWeather = {

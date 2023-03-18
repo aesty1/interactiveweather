@@ -12,4 +12,5 @@
 .field__container {
     display: flex;
     height: 40px;
+    width: 100%;
 }

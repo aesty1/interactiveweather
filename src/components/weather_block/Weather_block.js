@@ -8,6 +8,7 @@ class Weather_block extends Component {
         super()
         this.state = {
             city: 'Ufa',
+            cityCopy: 'Ufa',
             firstDayWeather: {},
             secondDayWeather: {},
             thirdDayWeather: {},
@@ -20,7 +21,7 @@ class Weather_block extends Component {
     }
     
     createWeatherData = () => {   
-        this.Api.get_weather(this.state.city)    
+        this.Api.get_weather(this.props.data)
             .then((result) => {
                 if(result.firstDayWeather.current && result.secondDayWeather.current && result.thirdDayWeather.current !== undefined) {
                     this.setState({ firstDayWeather: result.firstDayWeather.current,
@@ -30,6 +31,14 @@ class Weather_block extends Component {
                 this.setState({chanceOfRain: result.chanceOfRain.forecast.forecastday[0].hour[0].chance_of_rain});
           })
     };
+    renameCity() {
+        let fisrtWordChar = this.props.data.split("").slice(0, 1)[0].toUpperCase();
+        let wordRest = this.props.data.split("").slice(1).join('').toLowerCase();
+        this.setState({
+            cityCopy: fisrtWordChar+wordRest
+        })
+
+    }
     checkCondition = () => {
         if (this.state.firstDayWeather.condition) {
             this.firstConditionText = this.state.firstDayWeather.condition.text;
@@ -56,14 +65,15 @@ class Weather_block extends Component {
         this.checkCondition()
         if(this.props.data !== this.state.city) {
             this.setState({city: this.props.data})
+            this.renameCity();
             this.createWeatherData();
-            
+
         }
         return (
             <div className='weather_block'>
                 <div className='weather_block_info__container'>
                     <div className='weather_block_info_wrapper'>
-                        <p className='very_big_black_text weather_block_name'>{this.state.city}</p>
+                        <p className='very_big_black_text weather_block_name'>{this.state.cityCopy}</p>
                         <p className='very_small_grey_text weather_block_subtitle'>Chance of rain: {this.state.chanceOfRain}%</p>
                     </div>
                     
@@ -72,28 +82,7 @@ class Weather_block extends Component {
                 <div className='weather_block_icon__container'>
                     <img className='weather_block_icon' alt="weather_image" src={this.firstConditionIcon}/>
                 </div>
-                {/* <div className='firstDayWeather__container'>
-                    <div className='weather_block' onClick={() => this.props.updateColor("blue")}>
-                        <h1></h1>
-                        
-                        <p className='weather_discription'>{this.firstConditionText}</p>
-                        
-                    </div>
-                </div>
-                <div className='secondDayWeather__container'>
-                    <div className='weather_block' onClick={() => this.props.updateColor("red")}>
-                        <h1>{this.state.secondDayWeather.temp_c}</h1>
-                        <img alt="weather_image" src={this.secondConditionIcon}/>
-                        <p>{this.secondConditionText}</p>
-                    </div>
-                </div>
-                <div className='thirdDayWeather__container'>
-                    <div className='weather_block' onClick={() => this.props.updateColor("green")}>
-                        <h1>{this.state.thirdDayWeather.temp_c}</h1>
-                        <img alt="weather_image" src={this.thirdConditionIcon}/>
-                        <p>{this.thirdConditionText}</p>   
-                    </div>
-                </div> */}
+
                 
             </div>
         )

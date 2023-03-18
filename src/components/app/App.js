@@ -13,9 +13,6 @@ class App extends Component {
   updateData = (value) => {
     this.setState({data: value})
   }
-  updateColor = (color) => {
-    this.setState({bg_color: color})
-  }
   
   render() {
     return (
@@ -23,16 +20,14 @@ class App extends Component {
         <div className='container'>
           <div className='first_container'>
             <Search updateData={this.updateData} />
-            <div className='big_blocks__container'>
-              <Weather_block data={this.state.data} updateColor={this.updateColor} />
-              <Week_weather/>
-              
-              <Air_conditions data={this.state.data}/>
-            </div>
-            
+            <Weather_block data={this.state.data} updateColor={this.updateColor} />
           </div>
           <div className='second_container'>
-            <Today_forecast data={this.state.data}/>
+            <div className='big_blocks__container'>
+              <Today_forecast data={this.state.data}/>
+              <Air_conditions data={this.state.data}/>
+            </div>
+            <Week_weather data={this.state.data}/>
           </div>
         </div>  
       </div>     
