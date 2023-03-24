@@ -1,7 +1,7 @@
 .air_conditions_wrapper {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 45%;
 }
 .air_conditions__container {
     display: flex;
@@ -19,8 +19,6 @@
     gap: 5px;
 }
 .air_conditions_item__img {
-    width: 30px;
-    height: 30px;
     margin: auto 0
 }
 .wind_img {

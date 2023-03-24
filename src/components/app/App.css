@@ -41,25 +41,25 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 20px;
-  gap: 20px;
+  padding: 30px;
+  gap: 30px;
   width: 100%;
   overflow: hidden;
 }
 .blocks_wrapper {
   display: flex;
   flex-direction: column;
-
   background-color: #EAECEF;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
 }
-.first_container, .second_container {
+.first_container {
   display: flex;
   flex-direction: column;
   width: 100%;
   text-align: center;
-  gap: 20px;
+  gap: 30px;
+  height: 40%;
 }
 .first_container > div, .second_container > div {
   width: 100%;
@@ -68,29 +68,37 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  max-height: 100%;
+  text-align: center;
+  gap: 30px;
+  height: 60%;
 }
 .big_text {
-  font-size: 2.3em;
+  font-size: 2.5vw;
 }
-.small_grey_text {
+.very_small_grey_text {
   color: #b4b4b4;
-  font-size: 0.91rem;
+  font-size: 1.15vw;
   font-family: 'SKCuriosity-SemiBold', sans-serif;
 }
 .small_black_text {
-  font-size: 1.20rem;
+  font-size: 1.20vw;
 }
 .very_big_black_text {
-  font-size: 1.50rem;
+  font-size: 5.0vw;
 }
 .big_blocks__container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 20px;
+  gap: 30px;
   min-width: 65%;
 }
 .big_blocks__container > div:not(:first-child)  {
   max-height: 30%;
+}
+.small_icon {
+  width: 85px;
+}
+.small_img {
+  width: 40px;
 }

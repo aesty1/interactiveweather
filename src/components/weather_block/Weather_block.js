@@ -73,17 +73,17 @@ class Weather_block extends Component {
             <div className='weather_block'>
                 <div className='weather_block_info__container'>
                     <div className='weather_block_info_wrapper'>
-                        <p className='very_big_black_text weather_block_name'>{this.state.cityCopy}</p>
+                        <p className='weather_block_name big_text'>{this.state.cityCopy}</p>
                         <p className='very_small_grey_text weather_block_subtitle'>Chance of rain: {this.state.chanceOfRain}%</p>
                     </div>
-                    
-                    <p className='weather_block_temp'>{this.state.firstDayWeather.temp_c}°</p>
+
+                    <p className='weather_block_temp very_big_black_text'>{this.state.firstDayWeather.temp_c}°</p>
                 </div>
                 <div className='weather_block_icon__container'>
                     <img className='weather_block_icon' alt="weather_image" src={this.firstConditionIcon}/>
                 </div>
 
-                
+
             </div>
         )
     }

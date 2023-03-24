@@ -1,6 +1,7 @@
 .today_forecast_wrapper {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    height: 55%;
 }
 .block_title {
     text-align: left;
@@ -20,7 +21,6 @@
     margin: 0;
 }
 .today_forecast_icon {
-    width: 50px;
     margin: 0 auto;
 }
 .today_forecast_item_text {
