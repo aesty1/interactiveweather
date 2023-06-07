@@ -1,7 +1,7 @@
 class Weather_api {
     _key = "key=4d31e6331eba4a4ea32190422231401";
     _limit = "1"
-    _base_url = "http://api.weatherapi.com/v1/";
+    _base_url = "https://api.weatherapi.com/v1/";
     // city_name_to_coordinates = (city_name)  => {
     //     return fetch(`${this._base_url}current.json?${city_name}${this._key}`)
     //             .then(response => response.json());
