@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.cdad75f6.css",
-    "main.js": "/my-app/static/js/main.9af01b2d.js",
-    "static/media/SKCuriosity-ExtraBold.ttf": "/my-app/static/media/SKCuriosity-ExtraBold.ff11e037a39acbf35c92.ttf",
-    "static/media/SKCuriosity-SemiBold.ttf": "/my-app/static/media/SKCuriosity-SemiBold.3e4b05032b6a793b8ea3.ttf",
-    "static/media/SKCuriosity-Regular.ttf": "/my-app/static/media/SKCuriosity-Regular.6e0723d8a42429b1b9b9.ttf",
-    "index.html": "/my-app/index.html",
-    "main.cdad75f6.css.map": "/my-app/static/css/main.cdad75f6.css.map",
-    "main.9af01b2d.js.map": "/my-app/static/js/main.9af01b2d.js.map"
+    "main.css": "/aesty1/interactiveweather/static/css/main.92f55046.css",
+    "main.js": "/aesty1/interactiveweather/static/js/main.9af01b2d.js",
+    "static/media/SKCuriosity-ExtraBold.ttf": "/aesty1/interactiveweather/static/media/SKCuriosity-ExtraBold.ff11e037a39acbf35c92.ttf",
+    "static/media/SKCuriosity-SemiBold.ttf": "/aesty1/interactiveweather/static/media/SKCuriosity-SemiBold.3e4b05032b6a793b8ea3.ttf",
+    "static/media/SKCuriosity-Regular.ttf": "/aesty1/interactiveweather/static/media/SKCuriosity-Regular.6e0723d8a42429b1b9b9.ttf",
+    "index.html": "/aesty1/interactiveweather/index.html",
+    "main.92f55046.css.map": "/aesty1/interactiveweather/static/css/main.92f55046.css.map",
+    "main.9af01b2d.js.map": "/aesty1/interactiveweather/static/js/main.9af01b2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdad75f6.css",
+    "static/css/main.92f55046.css",
     "static/js/main.9af01b2d.js"
   ]
 }
